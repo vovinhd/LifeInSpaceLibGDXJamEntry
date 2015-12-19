@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="128" height="128" tilewidth="96" tileheight="48" nextobjectid="1">
+ <tileset firstgid="1" name="tiles" tilewidth="96" tileheight="96">
+  <tile id="0">
+   <image width="96" height="96" source="mothership.png"/>
+  </tile>
+  <tile id="1">
+   <image width="96" height="96" source="cube_tile.png"/>
+  </tile>
+  <tile id="2">
+   <image width="96" height="96" source="tile.png"/>
+  </tile>
+  <tile id="3">
+   <image width="96" height="96" source="traversable_tile.png"/>
+  </tile>
+  <tile id="4">
+   <image width="96" height="96" source="destroyed_tile1.png"/>
+  </tile>
+  <tile id="5">
+   <image width="96" height="96" source="enemy_base_tile.png"/>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="128" height="128">
+  <data encoding="base64" compression="zlib">
+   eJzt3EFuwjAQQNG0VNz/yN2wiBCBhHjisect3q6tzHzHQBXltizLDQAAAAAAAAAAAAAAAAAAAAAAABL6fei9Dq5vvqX3+ojtvefne6+Z63rbA3NofYZ7P8gv+r3bHsjpys9r+ufQ6zO6M6Bm9+c19J5DRb2761+7u/7jzfqecE3sm3GLOf8lXRfvZ9zqb0X07z2f2elfV+v56j+WzP21j2+vf10R89V/HPrXlr2/PaC//rX72wP6669/71nNSP/a9K9ta673R8dv/Jz43bX1fQT6X9v/DNf/OLL//1//a/bACP3tgbj+me//WK+z96xmpX9tLc8A/ceU9f7flmsjfs6u/7Hpz5lzQP85fLsH9J/L0X2g/5z2PgdA/7l92gOR3//sgTy2WkRe//rn8qqJ87+OV/0jnv+gf05nn/F5VO/XS5s9oOdcjl6j2s9p68x2ltekNwAAAAAAAAAAAAAAAAAAAAAAAAAArf0DDBm/mg==
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,50 @@
+No More Life in Space
+=====================
+
+No More Life in Space is a towerdefence game with partial procedurally generated maps and rogue-lite elements.
+
+Story
+-----
+
+You control an advanced alien civilisation in search of a new home. The most promising planet is a pale, blue world at the edge of the milkyway. Unfortunatly, the world is already inhabited by a semi-intelligent species. 
+
+Mechanics
+---------
+
+Goal of the game is to gather as many resources before being kicked of the planet to eventually overcome the defenders.
+The gameworld is made up of isometric, 4 sided tiles of 96x96 pixels size.
+The player starts with a MOTHERSHIP STRUCTURE at the origin coordinates (0,0) and a set amount of METAL. Tiles a certain distance (MOTHERSHIP.SIGHT) are hidden by FOW. Constructing turrents and structures advances the border of buildable terrain and reveals tiles. Defender units spawn from defender structures in a range from player buildings in waves. Waves spawn after the WAVE TIMER reaches 0 or the player triggers the next wave by STRIP MINIG. The bigger the revealed terretory, the shorter the wavetimer and the stronger the attacks.
+If the controlled area exceeds a CONQUEST SIZE, the defenders are defeated.
+
+Terrain generation
+------------------ 
+
+At the start of the game, a 128x128 map is generated  with the world origin at (64,64). If the edge of the map would fall in range of a player structure, a new chunk of terrain is generated. 
+
+Science
+-------
+
+Mothership
+----------
+
+Sructures
+---------
+
+
+Resources
+---------
+
+The game tracks 2 resources:
+	- metals
+	- intelligence
+
+METALS are harvested by HARVESTERS, static units with finite hitpoints. They automatically gather metals from their surrounding tiles. The denser the matter in those tiles, the higher their gathering rate.
+
+Metal density of tiles is dependent on the TERRAIN TYPE (Enum) and POPULATION DENSITY (int). 
+
+INTELLIGENCE is gathered by revealing more areas of the map, therefore by expansion of buildable terretory. Each player controlled structure has an 			- INFLUENCE,
+	- a SIGHT,
+	- a DETECTION,
+	- and a ALERT
+range. When a Tiles falls in the SIGHT range of a newly build structure, it counts for an amount of INTELLIGENCE and is revealed. Any visible enemy units and structres are revealed. A Tile in INFLUENCE range becomes buildable, if the TILE TYPE supports this. On tiles in DETECTION range stealth units are revealed.
+The ALERT range is longer or equal then the other ranges. Enemy structures in alert range spawn units.
